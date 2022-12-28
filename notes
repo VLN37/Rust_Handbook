@@ -1,0 +1,17 @@
+//creates a repository
+cargo new [name]
+
+//initializes an existing folder
+cargo init [name]
+
+//compiles the project similar to make --release for optimizations
+cargo build
+
+//compiles and runs
+cargo run
+
+// cargo.toml - same as package.json
+must exist in root
+
+//executes a binary in the workspace created in the root toml
+cargo run --bin [name]
