@@ -3,4 +3,9 @@
 members = [
   "01.1_hello",
   "01.2_hello_cargo",
+  "03.1_variables",
+  "03.2_data_types",
+  "03.3_functions",
+  "03.4_comments",
+  "03.5_control_flow"
 ]
