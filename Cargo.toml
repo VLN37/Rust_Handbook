@@ -14,4 +14,7 @@ members = [
   "05.1_structs",
   "05.2_rectangles",
   "05.3_methods",
+  "06.1_enums_and_patterns",
+  "06.2_match_control",
+  "06.3_if_let",
 ]
