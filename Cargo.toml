@@ -11,4 +11,7 @@ members = [
   "04.1_ownership",
   "04.2_references",
   "04.3_slice_type",
+  "05.1_structs",
+  "05.2_rectangles",
+  "05.3_methods",
 ]
