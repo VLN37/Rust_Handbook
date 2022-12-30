@@ -7,5 +7,8 @@ members = [
   "03.2_data_types",
   "03.3_functions",
   "03.4_comments",
-  "03.5_control_flow"
+  "03.5_control_flow",
+  "04.1_ownership",
+  "04.2_references",
+  "04.3_slice_type",
 ]
