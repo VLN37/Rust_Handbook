@@ -1,3 +1,9 @@
+#[derive(Debug)]
+struct Rectangle {
+  width: u32,
+  height: u32,
+}
+
 fn area(width: u32, height: u32) -> u32 {
   return width * height;
 }
@@ -6,11 +12,6 @@ fn tuple_area(dimensions: (u32, u32)) -> u32 {
   dimensions.0 * dimensions.1
 }
 
-#[derive(Debug)]
-struct Rectangle {
-  width: u32,
-  height: u32,
-}
 
 fn struct_area(rectangle: &Rectangle) -> u32 {
   rectangle.width * rectangle.height

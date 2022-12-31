@@ -17,4 +17,7 @@ members = [
   "06.1_enums_and_patterns",
   "06.2_match_control",
   "06.3_if_let",
+  "07.1_packages",
+  "07.2_modules",
+  "07.3_paths",
 ]

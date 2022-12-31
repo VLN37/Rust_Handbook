@@ -1,0 +1,13 @@
+[package]
+# a bin file with the same name is implied in src/main.rs
+name = "packages"
+version = "0.1.0"
+edition = "2021"
+
+
+# a list of non standard binary files the package compiles
+[[bin]]
+name = "another_binary"
+path = "bin/another_binary.rs"
+
+[dependencies]
