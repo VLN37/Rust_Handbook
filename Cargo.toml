@@ -20,4 +20,7 @@ members = [
   "07.1_packages",
   "07.2_modules",
   "07.3_paths",
+  "08.1_vectors",
+  "08.2_strings",
+  "08.3_hash_maps",
 ]
