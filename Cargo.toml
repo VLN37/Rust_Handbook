@@ -25,4 +25,7 @@ members = [
   "08.3_hash_maps",
   "09.1_panic",
   "09.2_result",
+  "10.1_generics",
+  "10.2_traits",
+  "10.3_lifetimes",
 ]
