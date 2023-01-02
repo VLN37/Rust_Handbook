@@ -28,4 +28,5 @@ members = [
   "10.1_generics",
   "10.2_traits",
   "10.3_lifetimes",
+  "11.1_tests",
 ]
