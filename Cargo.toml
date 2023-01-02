@@ -23,4 +23,6 @@ members = [
   "08.1_vectors",
   "08.2_strings",
   "08.3_hash_maps",
+  "09.1_panic",
+  "09.2_result",
 ]
