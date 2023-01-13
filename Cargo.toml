@@ -29,4 +29,7 @@ members = [
   "10.2_traits",
   "10.3_lifetimes",
   "11.1_tests",
+  "13.1_closures",
+  "13.2_iterators",
+  "projects/quick_sort",
 ]
