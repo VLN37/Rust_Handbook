@@ -6,7 +6,7 @@ use std::process;
 fn parse_config(args: &[String]) -> minigrep::Config {
   let query = args[1].clone();
   let file_path = args[2].clone();
-  minigrep::Config { query, file_path }
+  minigrep::Config { query, file_path, ignore_case: false }
 }
 
 fn main() {
