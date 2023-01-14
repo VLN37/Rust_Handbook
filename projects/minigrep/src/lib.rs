@@ -21,27 +21,31 @@ impl Config {
   }
 
   // build may fail, returns Result
-  pub fn build(args: &[String]) -> Result<Config, &'static str> {
-    if args.len() < 3 {
-      return Err("Usage: cmd {{needle}} {{haystack path}}");
-    }
+  pub fn build(
+    // receives anything that impl the Iterator trait, as std::env::args do
+    // more in Chapter 10: traits as parameters
+    mut args: impl Iterator<Item = String>,
+  ) -> Result<Config, &'static str> {
+    args.next(); // filename
+
+    let query = match args.next() {
+      Some(arg) => arg,
+      None => return Err("No needle provided")
+    };
+    let file_path = match args.next() {
+      Some(path) => path,
+      None => return Err("No haystack provided")
+    };
     Ok(Self {
-      query: args[1].clone(),
-      file_path: args[2].clone(),
+      query,
+      file_path,
       ignore_case: env::var("IGNORE_CASE").is_ok(),
     })
   }
 }
 
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-  let mut result = Vec::new();
-
-  for line in contents.lines() {
-    if line.contains(query) {
-      result.push(line);
-    }
-  }
-  result
+  contents.lines().filter(|line| line.contains(query)).collect()
 }
 
 pub fn search_case_insensitive<'a>(

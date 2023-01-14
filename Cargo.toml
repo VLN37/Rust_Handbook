@@ -32,4 +32,5 @@ members = [
   "13.1_closures",
   "13.2_iterators",
   "projects/quick_sort",
+  "projects/minigrep",
 ]

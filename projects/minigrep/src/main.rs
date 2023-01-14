@@ -10,9 +10,7 @@ fn parse_config(args: &[String]) -> minigrep::Config {
 }
 
 fn main() {
-  let args: Vec<String> = env::args().collect();
-
-  let config = minigrep::Config::build(&args).unwrap_or_else(|err| {
+  let config = minigrep::Config::build(env::args()).unwrap_or_else(|err| {
     eprintln!("Build failed:\n{}", err);
     process::exit(1);
   });
