@@ -13,12 +13,12 @@ fn main() {
   let args: Vec<String> = env::args().collect();
 
   let config = minigrep::Config::build(&args).unwrap_or_else(|err| {
-    println!("Build failed:\n{}", err);
+    eprintln!("Build failed:\n{}", err);
     process::exit(1);
   });
 
   if let Err(err) = minigrep::run(&config) {
-    println!("Run failed:\n{}", err);
+    eprintln!("Run failed:\n{}", err);
     process::exit(1);
   }
 }
