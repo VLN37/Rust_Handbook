@@ -6,5 +6,6 @@ fn main() {
 
   quick_sort(&mut arr2);
   arr1.sort();
-  println!("{:#?}", arr2);
+  println!("arr1: {:#?}", arr1);
+  println!("arr2: {:#?}", arr2);
 }
