@@ -9,6 +9,7 @@ edition = "2021"
 clap = {version="4.0", features=["derive"]} # easy CLI parsing!
 anyhow = "1.0" # pretty contextual errors!
 indicatif = "0.17.3" # progress bars!
-env_logger = "0.10" # every needs longgers
+log = "0.4.0"
+env_logger = "0.10" # every1 needs loggers -- this one is for runtime
 
 [features]

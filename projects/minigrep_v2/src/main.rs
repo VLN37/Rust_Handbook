@@ -1,13 +1,13 @@
 #![allow(unused)]
 
+use anyhow::Context;
+use clap::Parser;
+use std::fs;
 use std::fs::File;
 use std::io::BufRead;
 use std::io::BufReader;
 use std::process;
-use std::fs;
-use anyhow::Context;
-use clap::Parser;
-
+use log::{info, warn};
 
 #[derive(Parser)]
 struct Cli {
@@ -18,10 +18,12 @@ struct Cli {
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+  env_logger::init();
   let args = Cli::parse();
 
+  log::info!("Minigrep V2 has started");
   let file = File::open(&args.path)
-    .with_context(|| format!("could not read file {:#?}", args.path))?;
+  .with_context(|| format!("could not read file {:#?}", args.path))?;
 
   let content = BufReader::new(file);
   for result in content.lines() {
@@ -30,5 +32,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
       println!("{}", line)
     }
   }
+  log::info!("Minigrep V2 operation succesful");
   Ok(())
 }
