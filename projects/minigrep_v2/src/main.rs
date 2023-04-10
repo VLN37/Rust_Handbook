@@ -8,6 +8,7 @@ use std::fs;
 use anyhow::Context;
 use clap::Parser;
 
+
 #[derive(Parser)]
 struct Cli {
   /// the pattern to look for
